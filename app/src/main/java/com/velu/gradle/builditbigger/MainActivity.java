@@ -1,11 +1,14 @@
 package com.velu.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
+import com.velu.displaylib.DisplayActivity;
+import com.velu.jokes.Joke;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +43,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
+        String joke = new Joke().getJoke();
+//        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, DisplayActivity.class);
+        intent.putExtra("joke", joke);
+        startActivity(intent);
+
     }
 
 

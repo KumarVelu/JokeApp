@@ -4,4 +4,24 @@
     <string name="button_text">Tell Joke</string>
     <string name="action_settings">Settings</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string-array name="jokes">
+        <item>How many programmers does it take to change a light bulb? \n
+            None – It’s a hardware problem</item>
+        <item>Why do programmers always mix up Halloween and Christmas? \n
+                Because Oct 31 equals Dec 25.</item>
+        <item>There are only 10 kinds of people in this world: those who know binary and those who don’t.</item>
+        <item>A SQL query goes into a bar, walks up to two tables and asks, "Can I join you?"</item>
+        <item>Q: "Whats the object-oriented way to become wealthy?" \n
+            A: Inheritance</item>
+        <item>To understand what recursion is, you must first understand recursion.</item>
+        <item>Why programmers like UNIX: \n
+            unzip, strip, touch, finger, grep, mount, fsck, more, yes, fsck, fsck, fsck, umount, sleep </item>
+        <item>Why do Java programmers wear glasses? \n
+            Because they don’t C#!</item>
+        <item>If you like infinite loop jokes, check this one out.</item>
+        <item>Q: What do you call a collection that has no methods and doesn’t do anything? \n
+            A: A listless list</item>
+    </string-array>
+
 </resources>
