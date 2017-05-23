@@ -1,6 +1,7 @@
 package com.velu.gradle.builditbigger;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Pair;
@@ -8,8 +9,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.velu.displaylib.DisplayActivity;
+
+import java.util.concurrent.ExecutionException;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +47,17 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
+    public void tellJoke(View view) throws ExecutionException, InterruptedException {
 
-        new JokeAsyncTask().execute(this);
+        JokeAsyncTask jokeAsyncTask = new JokeAsyncTask();
+        jokeAsyncTask.execute();
+        String joke = jokeAsyncTask.get();
+
+        Intent intent = new Intent(this, DisplayActivity.class);
+        intent.putExtra("joke", joke);
+        startActivity(intent);
+
+//        new JokeAsyncTask().execute(this);
 
         /*String joke = new Joke().getJoke();
 //        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
