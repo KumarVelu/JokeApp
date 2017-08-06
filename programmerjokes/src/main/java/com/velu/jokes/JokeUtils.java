@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Velu on 22/05/17.
  */
 
-public class JokeUtils {
+class JokeUtils {
 
     private List<String> mJokeList;
 

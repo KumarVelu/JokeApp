@@ -1,10 +1,8 @@
 package com.velu.gradle.builditbigger;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -56,20 +54,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayActivity.class);
         intent.putExtra("joke", joke);
         startActivity(intent);
-
-//        new JokeAsyncTask().execute(this);
-
-        /*String joke = new Joke().getJoke();
-//        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
-
-        Intent intent = new Intent(this, DisplayActivity.class);
-        intent.putExtra("joke", joke);
-        startActivity(intent);*/
     }
-
-    public void sayHiFromBackend(){
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Kumar Velu"));
-    }
-
-
 }
