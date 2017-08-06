@@ -4,6 +4,7 @@ import android.support.test.runner.AndroidJUnit4;
 
 import com.velu.gradle.builditbigger.JokeAsyncTask;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -30,6 +31,7 @@ public class FetchJokeTest {
 
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
+            Assert.fail();
         }
     }
 }
